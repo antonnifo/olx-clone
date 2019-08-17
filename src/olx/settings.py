@@ -20,7 +20,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'a9_e0a_m$e2njhw!#@*0s-(ca%1sf%3#9(l2%9t2dbwi))6@7!'
+SECRET_KEY = os.getenv('SECRET_KEY')
+NAME = os.getenv('NAME')
+HOST = os.getenv('HOST')
+USER = os.getenv('USER')
+PORT = os.getenv('PORT')
+PASSWORD = os.getenv('PASSWORD')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -75,8 +80,12 @@ WSGI_APPLICATION = 'olx.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': NAME,
+        'HOST': HOST,
+        'USER': USER,
+        'PORT': PORT,
+        'PASSWORD':PASSWORD,
     }
 }
 
@@ -105,7 +114,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Africa/Nairobi'
 
 USE_I18N = True
 
