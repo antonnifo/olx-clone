@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.utils import timezone
+from django.utils.text import slugify
 
 class Products(models.Model):
 
@@ -22,6 +23,16 @@ class Products(models.Model):
     price       = models.DecimalField(max_digits=11,decimal_places=2)
     created     = models.DateTimeField(default=timezone.now)
     
+    slug        = models.SlugField(null=True, blank=True)
+
+    def save(self, *args, **kwargs):
+        '''overrides save action'''
+        
+        if not self.slug and self.name:
+            self.slug = slugify(self.name)
+
+        super(Products, self).save(*args, **kwargs)    
+
     class Meta:
         verbose_name        = 'product'
         verbose_name_plural = 'products'
