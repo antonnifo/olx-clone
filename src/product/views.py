@@ -13,9 +13,9 @@ def product_list(request):
 
     return render(request ,template, context)
 
-def product_detail(request,id):
+def product_detail(request,product_slug):
 
-    product_detail = Products.objects.get(id=id)
+    product_detail = Products.objects.get(slug=product_slug)
 
     template       = 'Products/product_detail.html'
 
