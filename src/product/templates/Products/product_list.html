@@ -1,0 +1,184 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+	<!-- breadcrumbs -->
+	<div class="w3layouts-breadcrumbs text-center">
+		<div class="container">
+			<span class="agile-breadcrumbs"><a href="index.html"><i class="fa fa-home home_1"></i></a> / <span>All Ads</span></span>
+		</div>
+	</div>
+	<!-- //breadcrumbs -->
+
+
+
+	<!-- Products -->
+	<div class="total-ads main-grid-border">
+		<div class="container">
+			<div class="select-box">
+				<div class="select-city-for-local-ads ads-list">
+					<label>Select your city to see local ads</label>
+						<select>
+							<optgroup label="Popular Cities">
+													<option selected style="display:none;color:#eee;">Select City</option>
+													<option>Birmingham</option>
+													<option>Anchorage</option>
+												
+							</optgroup>
+											
+												<optgroup label="More Cities">
+												
+											
+													<optgroup label="Mississippi">
+														<option>Jackson</option>
+														<option>Gulfport</option>
+														<option>Southaven</option>
+														<option>Hattiesburg</option>
+														<option>Biloxi</option>         														
+													</optgroup>
+													<optgroup label="Missouri">
+														<option>Kansas City</option>
+														<option>St. Louis</option>
+														<option>Springfield</option>
+														<option>Independence</option>
+														<option>Columbia</option>            														
+													</optgroup>
+													
+														
+												</optgroup>
+			            </select>
+				</div>
+				<div class="browse-category ads-list">
+					<label>Browse Categories</label>
+					<select class="selectpicker show-tick" data-live-search="true">
+					  <option data-tokens="Mobiles">All</option>
+					  <option data-tokens="Mobiles">Mobiles</option>
+					  <option data-tokens="Electronics & Appliances">Electronics & Appliances</option>
+					  <option data-tokens="Cars">Cars</option>
+					  <option data-tokens="Bikes">Bikes</option>
+					  <option data-tokens="Furniture">Furniture</option>
+					  <option data-tokens="Pets">Pets</option>
+					  <option data-tokens="Books, Sports & Hobbies">Books, Sports & Hobbies</option>
+					  <option data-tokens="Fashion">Fashion</option>
+					  <option data-tokens="Kids">Kids</option>
+					  <option data-tokens="Services">Services</option>
+					  <option data-tokens="Jobs">Jobs</option>
+					  <option data-tokens="Real Estate">Real Estate</option>
+					</select>
+				</div>
+				<div class="search-product ads-list">
+					<label>Search for a specific product</label>
+					<div class="search">
+						<div id="custom-search-input">
+						<div class="input-group">
+							<input type="text" class="form-control input-lg" placeholder="Buscar" />
+							<span class="input-group-btn">
+								<button class="btn btn-info btn-lg" type="button">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</span>
+						</div>
+					</div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+			<div class="all-categories">
+				<h3> Select your category and find the perfect ad</h3>
+				<ul class="all-cat-list">
+					<li><a href="mobiles.html">Mobiles <span class="num-of-ads">(5,78,076)</span></a></li>
+					<li><a href="electronics-appliances.html">Electronics & Appliances  <span class="num-of-ads">(3,66,495)</span></a></li>
+					<li><a href="real-estate.html">Real Estate  <span class="num-of-ads">(45,450)</span></a></li>
+					<li><a href="furnitures.html">Furniture    <span class="num-of-ads">(1,77,145)</span></a></li>
+					<li><a href="pets.html">Pets   <span class="num-of-ads">(1,81,250)</span></a></li>
+					<li><a href="books-sports-hobbies.html">Books, Sports & Hobbies    <span class="num-of-ads">(66,822)</span></a></li>
+					<li><a href="fashion.html">Fashion   <span class="num-of-ads">(29,156)</span></a></li>
+					<li><a href="kids.html">Kids   <span class="num-of-ads">(25,699)</span></a></li>
+					<li><a href="services.html">Services   <span class="num-of-ads">(2,15,895)</span></a></li>
+					<li><a href="cars.html">Cars   <span class="num-of-ads">(2,15,306)</span></a></li>
+				</ul>
+			</div>
+			<div class="ads-grid">
+				<div class="side-bar col-md-3">
+		
+				<div class="w3ls-featured-ads">
+					<h2 class="sear-head fer">Featured Ads</h2>
+					<div class="w3l-featured-ad">
+						<a href="single.html">
+							<div class="w3-featured-ad-left">
+								<img src="images/f1.jpg" title="ad image" alt="" />
+							</div>
+							<div class="w3-featured-ad-right">
+								<h4>Lorem Ipsum is simply dummy text of the printing industry</h4>
+								<p>$ 450</p>
+							</div>
+							<div class="clearfix"></div>
+						</a>
+					</div>
+				
+
+					<div class="clearfix"></div>
+				</div>
+				</div>
+
+				<div class="agileinfo-ads-display col-md-9">
+					<div class="wrapper">					
+					<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+					
+					  <div id="myTabContent" class="tab-content">
+						<div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+						   <div>
+												<div id="container">
+						
+								
+								<div class="clearfix"></div>
+							<ul class="list">
+								<a href="single.html">
+									<li>
+									<img src="images/m1.jpg" title="" alt="" />
+									<section class="list-left">
+									<h5 class="title">There are many variations of passages of Lorem Ipsum</h5>
+									<span class="adprice">$290</span>
+									<p class="catpath">Mobile Phones » Brand</p>
+									</section>
+									<section class="list-right">
+									<span class="date">Today, 17:55</span>
+									<span class="cityname">City name</span>
+									</section>
+									<div class="clearfix"></div>
+									</li> 
+								</a>
+						
+								
+							</ul>
+						</div>
+							</div>
+						</div>
+					
+			
+						<ul class="pagination pagination-sm">
+							<li><a href="#">Prev</a></li>
+							<li><a href="#">1</a></li>
+							<li><a href="#">2</a></li>
+							<li><a href="#">3</a></li>
+							<li><a href="#">4</a></li>
+							<li><a href="#">5</a></li>
+							<li><a href="#">6</a></li>
+							<li><a href="#">7</a></li>
+							<li><a href="#">8</a></li>
+							<li><a href="#">Next</a></li>
+						</ul>
+					  </div>
+					</div>
+				</div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>	
+	</div>
+	<!-- // Products -->
+
+
+
+
+{% endblock body %}
