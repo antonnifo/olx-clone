@@ -1,5 +1,6 @@
 from django.core.paginator import Paginator
 from django.shortcuts import render
+from django.db.models import Count
 
 from .models import ProductImage, Products, Category
 
@@ -8,7 +9,7 @@ def product_list(request):
 
     product_list  = Products.objects.all()
 
-    category_list = Category.objects.all() 
+    category_list = Category.objects.annotate(total_products=Count('products'))
 
     template      = 'Products/product_list.html'
 
