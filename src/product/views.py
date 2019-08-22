@@ -1,23 +1,26 @@
 from django.core.paginator import Paginator
 from django.shortcuts import render
 
-from .models import ProductImage, Products
+from .models import ProductImage, Products, Category
 
 
 def product_list(request):
 
-    product_list = Products.objects.all()
+    product_list  = Products.objects.all()
 
-    template     = 'Products/product_list.html'
+    category_list = Category.objects.all() 
 
-    paginator    = Paginator(product_list, 1)
+    template      = 'Products/product_list.html'
 
-    page         = request.GET.get('page')
+    paginator     = Paginator(product_list, 1)
 
-    product_list = paginator.get_page(page) 
+    page          = request.GET.get('page')
 
-    context      = {
-                    'product_list' : product_list
+    product_list  = paginator.get_page(page) 
+
+    context       = {
+                    'product_list'  : product_list,
+                    'category_list' : category_list
         }
 
     return render(request ,template, context)
