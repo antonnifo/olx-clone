@@ -134,12 +134,12 @@
 								<div class="clearfix"></div>
 							<ul class="list">
 							{% for product in product_list%}
-								<a href="single.html">
+								<a href="{% url 'products:product_detail' product.slug %}">
 									<li>
-									<img src="images/m1.jpg" title="" alt="" />
+									<img src="{{ product.image.url}}" title="" alt="" />
 									<section class="list-left">
 									<h5 class="title">{{ product.name }}</h5>
-									<span class="adprice">{{ product.price}}</span>
+									<span class="adprice">Ksh {{ product.price}}</span>
 									<p class="catpath">{{ product.category }} » {{ product.brand }}</p>
 									</section>
 									<section class="list-right">
