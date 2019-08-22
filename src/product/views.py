@@ -1,11 +1,20 @@
+from django.core.paginator import Paginator
 from django.shortcuts import render
-from .models import Products, ProductImage
+
+from .models import ProductImage, Products
+
 
 def product_list(request):
 
     product_list = Products.objects.all()
 
     template     = 'Products/product_list.html'
+
+    paginator    = Paginator(product_list, 1)
+
+    page         = request.GET.get('page')
+
+    product_list = paginator.get_page(page) 
 
     context      = {
                     'product_list' : product_list
@@ -27,4 +36,3 @@ def product_detail(request,product_slug):
     }
 
     return render(request, template, context)
-   
