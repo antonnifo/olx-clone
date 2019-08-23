@@ -5,9 +5,9 @@
 	<!-- breadcrumbs -->
 	<div class="w3layouts-breadcrumbs text-center">
 		<div class="container">
-			<span class="agile-breadcrumbs"><a href="index.html"><i class="fa fa-home home_1"></i></a> / <span>All Ads</span></span>
+			<span class="agile-breadcrumbs"><a href="{% url 'products:product_list'%}"><i class="fa fa-home home_1"></i> /<span> All Ads</span></span></a>
 			{% if category %}
-				<span class="agile-breadcrumbs"><a href="#"></a> / <span>{{ category }}</span></span>
+				<span class="agile-breadcrumbs"><a href="#"></a>/<span>{{ category }}</span></span>
 			{% endif %}
 		</div>
 	</div>
@@ -24,27 +24,28 @@
 						<select>
 							<optgroup label="Popular Cities">
 													<option selected style="display:none;color:#eee;">Select City</option>
-													<option>Birmingham</option>
-													<option>Anchorage</option>
+													<option>Nairobi</option>
+													<option>Mombasa</option>
+													<option>Kisumu</option>
 												
 							</optgroup>
 											
 												<optgroup label="More Cities">
 												
 											
-													<optgroup label="Mississippi">
-														<option>Jackson</option>
-														<option>Gulfport</option>
-														<option>Southaven</option>
-														<option>Hattiesburg</option>
-														<option>Biloxi</option>         														
+													<optgroup label="Nairobi">
+														<option>Pangani</option>
+														<option>Kilimani</option>
+														<option>Kawangware</option>
+														<option>Roysambu</option>
+														<option>Umoja</option>         														
 													</optgroup>
-													<optgroup label="Missouri">
-														<option>Kansas City</option>
-														<option>St. Louis</option>
-														<option>Springfield</option>
-														<option>Independence</option>
-														<option>Columbia</option>            														
+													<optgroup label="Mombasa">
+														<option>Tudor</option>
+														<option>Majengo</option>
+														<option>Kisauni</option>
+														<option>Bamburi</option>
+														<option>Likoni</option>            														
 													</optgroup>
 													
 														
@@ -74,7 +75,7 @@
 					<div class="search">
 						<div id="custom-search-input">
 						<div class="input-group">
-							<input type="text" class="form-control input-lg" placeholder="Buscar" />
+							<input type="text" class="form-control input-lg" placeholder="Iphone" />
 							<span class="input-group-btn">
 								<button class="btn btn-info btn-lg" type="button">
 									<i class="glyphicon glyphicon-search"></i>
@@ -99,7 +100,18 @@
 			</div>
 			<div class="ads-grid">
 				<div class="side-bar col-md-3">
-		
+				
+
+				<div class="search-hotel">
+					<h3 class="agileits-sear-head">Name contains</h3>
+					<form method='GET' action = "{% url 'product:product_list' %}">
+						<input type="text"  name = "q" value="Product name..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Product name...';}" required="">
+						<input type="submit" value=" ">
+					</form>
+				</div>
+				
+				
+				
 				<div class="w3ls-featured-ads">
 					<h2 class="sear-head fer">Featured Ads</h2>
 					<div class="w3l-featured-ad">
@@ -118,6 +130,7 @@
 
 					<div class="clearfix"></div>
 				</div>
+
 				</div>
 
 				<div class="agileinfo-ads-display col-md-9">
