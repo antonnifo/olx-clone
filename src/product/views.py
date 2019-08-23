@@ -1,6 +1,7 @@
 from django.core.paginator import Paginator
 from django.shortcuts import render
 from django.db.models import Count, Q
+from django.shortcuts import get_object_or_404
 
 from .models import ProductImage, Products, Category
 
@@ -12,8 +13,8 @@ def product_list(request, category_slug=None):
     category_list    = Category.objects.annotate(total_products=Count('products'))
     
     if category_slug:
-        category     = Category.objects.get(slug   =category_slug)
-        product_list = product_list.filter(category=category)
+        category     = get_object_or_404(Category,slug=category_slug)
+        product_list = product_list.filter(category =category)
 
     search_query     = request.GET.get('q')
 
@@ -41,7 +42,7 @@ def product_list(request, category_slug=None):
 
 def product_detail(request,product_slug):
 
-    product_detail = Products.objects.get(slug=product_slug)
+    product_detail = get_object_or_404(Products,slug=product_slug)
 
     Product_image  = ProductImage.objects.filter(product=product_detail)
 
