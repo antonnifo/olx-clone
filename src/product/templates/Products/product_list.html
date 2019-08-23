@@ -6,6 +6,9 @@
 	<div class="w3layouts-breadcrumbs text-center">
 		<div class="container">
 			<span class="agile-breadcrumbs"><a href="index.html"><i class="fa fa-home home_1"></i></a> / <span>All Ads</span></span>
+			{% if category %}
+				<span class="agile-breadcrumbs"><a href="#"></a> / <span>{{ category }}</span></span>
+			{% endif %}
 		</div>
 	</div>
 	<!-- //breadcrumbs -->
@@ -88,7 +91,7 @@
 				<ul class="all-cat-list">
 				{% for  category in category_list %}
 					
-			      <li><a href="mobiles.html">{{category.category_name}} <span class="num-of-ads">({{category.total_products}})</span></a></li>
+			      <li><a href="{% url 'products:product_list_category' category.slug %}">{{category.category_name}} <span class="num-of-ads">({{category.total_products}})</span></a></li>
 				
 				{% endfor %}
 
