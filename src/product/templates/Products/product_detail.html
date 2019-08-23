@@ -8,9 +8,9 @@
 	<div class="w3layouts-breadcrumbs text-center">
 		<div class="container">
 			<span class="agile-breadcrumbs">
-			<a href="index.html"><i class="fa fa-home home_1"></i></a> / 
-			<a href="all-classifieds.html">All Ads</a> / 
-			<a href="cars.html">{{ product_detail.category}}</a> / 
+			<a href="/"><i class="fa fa-home home_1"></i></a> / 
+			<a href="{% url 'products:product_list'%}">All Ads</a> / 
+			<a href="#">{{ product_detail.category}}</a> / 
 			<span>{{product_detail.name}}</span></span>
 		</div>
 	</div>
