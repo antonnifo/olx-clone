@@ -58,6 +58,17 @@ class Category(models.Model):
     category_name = models.CharField(max_length=50)
     image         = models.ImageField(upload_to='category/', blank=True,null=True)
 
+    slug          = models.SlugField(null=True, blank=True)
+
+    def save(self, *args, **kwargs):
+        '''overrides save action'''
+        
+        if not self.slug and self.category_name:
+            self.slug = slugify(self.category_name)
+
+        super(Category, self).save(*args, **kwargs)     
+
+
     class Meta:
         verbose_name        = 'category'
         verbose_name_plural = 'categories'
