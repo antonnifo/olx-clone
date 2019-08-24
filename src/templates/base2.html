@@ -1,0 +1,159 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>OlxClone  | All Classifieds </title>
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}"><!-- bootstrap-CSS -->
+<link rel="stylesheet" href="{% static 'css/bootstrap-select.css' %}"><!-- bootstrap-select-CSS -->
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" /><!-- style.css -->
+<link rel="stylesheet" type="text/css" href="{% static 'css/jquery-ui1.css' %}">
+<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}" /><!-- fontawesome-CSS -->
+
+<!-- meta tags -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Resale Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //meta tags -->
+<!--fonts-->
+<link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+<!--//fonts-->	
+<!-- js -->
+<script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+<!-- js -->
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="{% static 'js/bootstrap.js' %}"></script>
+<script src="{% static 'js/bootstrap-select.js' %}"></script>
+<script>
+  $(document).ready(function () {
+    var mySelect = $('#first-disabled2');
+
+    $('#special').on('click', function () {
+      mySelect.find('option:selected').prop('disabled', true);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#special2').on('click', function () {
+      mySelect.find('option:disabled').prop('disabled', false);
+      mySelect.selectpicker('refresh');
+    });
+
+    $('#basic2').selectpicker({
+      liveSearch: true,
+      maxOptions: 1
+    });
+  });
+</script>
+
+</head>
+
+
+<body>
+
+	<!-- header -->
+	<header>
+		<div class="w3ls-header"><!--header-one--> 
+			<div class="w3ls-header-left">
+				<p><a href="mobileapp.html"><i class="fa fa-download" aria-hidden="true"></i>Download Mobile App </a></p>
+			</div>
+			<div class="w3ls-header-right">
+				<ul>
+					<li class="dropdown head-dpdn">
+						<a href="signin.html" aria-expanded="false"><i class="fa fa-user" aria-hidden="true"></i> Sign Up</a>
+					</li>
+	
+			
+				</ul>
+			</div>
+			
+			<div class="clearfix"> </div> 
+		</div>
+		<div class="container">
+			<div class="agile-its-header">
+				<div class="logo">
+					<h1><a href="index.html"><span>Olx</span>Clone</a></h1>
+				</div>
+	
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</header>
+
+{% block body %}
+
+
+{% endblock body %}
+
+
+	<!--footer section start-->		
+		<footer>
+			<div class="w3-agileits-footer-top">
+				<div class="container">
+										
+				</div>	
+			</div>	
+			<div class="agileits-footer-bottom text-center">
+			<div class="container">
+				<div class="w3-footer-logo">
+					<h1><a href="index.html"><span>Olx</span>Clone</a></h1>
+				</div>
+				<div class="w3-footer-social-icons">
+					<ul>
+						<li><a class="facebook" href="#"><i class="fa fa-facebook" aria-hidden="true"></i><span>Facebook</span></a></li>
+						<li><a class="twitter" href="#"><i class="fa fa-twitter" aria-hidden="true"></i><span>Twitter</span></a></li>
+						<li><a class="flickr" href="#"><i class="fa fa-flickr" aria-hidden="true"></i><span>Flickr</span></a></li>
+						<li><a class="googleplus" href="#"><i class="fa fa-google-plus" aria-hidden="true"></i><span>Google+</span></a></li>
+						<li><a class="dribbble" href="#"><i class="fa fa-dribbble" aria-hidden="true"></i><span>Dribbble</span></a></li>
+					</ul>
+				</div>
+				<div class="copyrights">
+					<p> © 2016 Resale. All Rights Reserved | Design by  <a href="http://w3layouts.com/"> W3layouts</a></p>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+		</footer>
+        <!--footer section end-->
+</body>
+		<!-- Navigation-JavaScript -->
+			<script src="{% static 'js/classie.js' %}"></script>
+			<script src="{% static 'js/main.js' %}"></script>
+		<!-- //Navigation-JavaScript -->
+		<!-- here stars scrolling icon -->
+			<script type="text/javascript">
+				$(document).ready(function() {
+					/*
+						var defaults = {
+						containerID: 'toTop', // fading element id
+						containerHoverID: 'toTopHover', // fading element hover id
+						scrollSpeed: 1200,
+						easingType: 'linear' 
+						};
+					*/
+										
+					$().UItoTop({ easingType: 'easeOutQuart' });
+										
+					});
+			</script>
+			<!-- start-smoth-scrolling -->
+			<script type="text/javascript" src="{% static 'js/move-top.js'%}"></script>
+			<script type="text/javascript" src="{% static 'js/easing.js'%}"></script>
+			<script type="text/javascript">
+				jQuery(document).ready(function($) {
+					$(".scroll").click(function(event){		
+						event.preventDefault();
+						$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+					});
+				});
+			</script>
+			<!-- start-smoth-scrolling -->
+		<!-- //here ends scrolling icon -->
+</html>
