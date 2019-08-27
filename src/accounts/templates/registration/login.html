@@ -1,0 +1,31 @@
+{% extends 'base2.html' %}
+
+{% block body %}
+
+	<!-- //header -->
+	<!-- sign in form -->
+	 <section>
+		<div id="agileits-sign-in-page" class="sign-in-wrapper">
+			<div class="agileinfo_signin">
+			<h3>Sign In</h3>
+				<form method="POST">
+					   {% csrf_token %}
+					     {{ form }}
+						 
+					<input type="submit" value="Sign In">
+					<div class="forgot-grid">
+					<label class="checkbox"><input type="checkbox" name="checkbox">Remember me</label>
+					  	<div class="forgot">
+							<a href="#">Forgot Password? click here</a>
+						</div>
+										
+						<div class="clearfix"> </div>
+					</div>
+
+				</form>
+				<h6> Not a Member Yet? <a href="signup.html">Sign Up Now</a> </h6>
+			</div>
+		</div>
+	</section>
+	<!-- //sign in form -->
+{% endblock body %}
